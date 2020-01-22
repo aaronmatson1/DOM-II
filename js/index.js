@@ -10,9 +10,16 @@ window.addEventListener("load", function(e) {
     console.log("All resources finished loading!");
   });
 
+//Header Img: Appear when nav heading is moused over with a delay
+
 logoHeading.addEventListener("mouseover", function() {
-    introImg.style.display = "initial";
-})
+    setTimeout(() => {
+      introImg.style.display="initial";
+    }, 500);
+});
+
+// Buttons: Scale up on mouseenter, return to normal on mouseout
+
 buttons.forEach((btn) => {
     btn.addEventListener("mouseenter", function(e) {
         e.target.style.transform = "scale(1.2,1.2)";
@@ -23,6 +30,9 @@ buttons.forEach((btn) => {
         e.target.textContent = "Sign. Me. UP!";
     })
 });
+
+// Buttons: Create and show new p tag below when clicked
+
 buttons.forEach((btn) => {
     btn.addEventListener("click", function(e) {
         contentPick.style.flexWrap = "wrap";
@@ -35,6 +45,8 @@ buttons.forEach((btn) => {
         console.log(newH1);
       })
   })
+
+  // Images: skew -15deg when double clicked
 
   allImgs.forEach((img) => {
       img.addEventListener("dblclick", function(e) {
