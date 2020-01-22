@@ -167,6 +167,7 @@ img {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  opacity: 0;
 }
 @media (max-width: 500px) {
   .container {
@@ -231,6 +232,7 @@ img {
   border-bottom: 2px dashed #C0C0C0;
 }
 .home .intro img {
+  display: none;
   max-width: 100%;
   height: auto;
 }
