@@ -6,9 +6,15 @@ const buttons = document.querySelectorAll(".btn");
 const contentPick = document.querySelector(".content-pick");
 const allImgs = document.querySelectorAll("img");
 const allPs = document.querySelectorAll("p");
+const container = document.querySelectorAll(".container");
 
 window.addEventListener("load", function(e) {
     console.log("All resources finished loading!");
+    setTimeout(() => {
+        container.forEach((selection) => {
+            selection.style.opacity = "1";
+        })
+    }, 1000)
   });
 
 window.addEventListener("scroll", function(e){
