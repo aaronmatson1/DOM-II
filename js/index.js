@@ -5,10 +5,16 @@ const introImg = document.querySelector("header img");
 const buttons = document.querySelectorAll(".btn");
 const contentPick = document.querySelector(".content-pick");
 const allImgs = document.querySelectorAll("img");
+const allPs = document.querySelectorAll("p");
 
 window.addEventListener("load", function(e) {
     console.log("All resources finished loading!");
   });
+
+window.addEventListener("scroll", function(e){
+    console.log("The scroll works");
+    logoHeading.style.marginLeft = "20px";
+})
 
 //Header Img: Appear when nav heading is moused over with a delay
 
@@ -57,3 +63,14 @@ buttons.forEach((btn) => {
     contentPick.appendChild(newP);
   });
 });
+
+allPs.forEach((p) => {
+    p.addEventListener("mousedown", function(e) {
+        e.target.style.backgroundColor = "lightblue";
+        e.target.style.color = "yellow";
+    })
+    p.addEventListener("mouseup", function(e){
+        e.target.style.backgroundColor = "transparent";
+        e.target.style.color = "black";
+    })
+})
