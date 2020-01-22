@@ -1,5 +1,6 @@
 // Your code goes here
 
+//Variables
 const logoHeading = document.querySelector(".logo-heading");
 const introImg = document.querySelector("header img");
 const buttons = document.querySelectorAll(".btn");
@@ -7,6 +8,18 @@ const contentPick = document.querySelector(".content-pick");
 const allImgs = document.querySelectorAll("img");
 const allPs = document.querySelectorAll("p");
 const container = document.querySelectorAll(".container");
+const navLinks = document.querySelectorAll(".nav-link");
+
+//functions and event listeners
+
+navLinks.forEach((link) => {
+    link.addEventListener("click", function(e) {
+        e.preventDefault();
+        console.log('prevented default function')
+    })
+})
+
+
 
 window.addEventListener("load", function(e) {
     console.log("All resources finished loading!");
