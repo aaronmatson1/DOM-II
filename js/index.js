@@ -14,13 +14,14 @@ logoHeading.addEventListener("mouseover", function() {
     introImg.style.display = "initial";
 })
 buttons.forEach((btn) => {
-    btn.addEventListener("mouseover", function(e) {
+    btn.addEventListener("mouseenter", function(e) {
         e.target.style.transform = "scale(1.2,1.2)";
         e.target.textContent = "Click for adventure";
     })
-    // btn.removeEventListener("mouseover", function(e) {
-    //     e.target.style.transform = "scale(1.2,1.2)";
-    // })
+    btn.addEventListener("mouseout", function(e) {
+        e.target.style.transform = "scale(1,1)";
+        e.target.textContent = "Sign. Me. UP!";
+    })
 });
 buttons.forEach((btn) => {
     btn.addEventListener("click", function(e) {
