@@ -9,6 +9,7 @@ const allImgs = document.querySelectorAll("img");
 const allPs = document.querySelectorAll("p");
 const container = document.querySelectorAll(".container");
 const navLinks = document.querySelectorAll(".nav-link");
+const textContentDiv = document.querySelectorAll(".text-content");
 
 //functions and event listeners
 
@@ -89,10 +90,23 @@ allImgs.forEach((img) => {
     })
 })
 
+textContentDiv.forEach((div) => {
+    div.addEventListener("mousedown", function(e) {
+        e.target.style.backgroundColor = "gold";
+        e.target.style.color = "brown";
+    })
+    div.addEventListener("mouseup", function(e){
+        e.target.style.backgroundColor = "transparent";
+        e.target.style.color = "black";
+    })
+})
+
+
 // Paragraph tags: change colors on mousedown, return to normal on mouseup
 
 allPs.forEach((p) => {
     p.addEventListener("mousedown", function(e) {
+      e.stopPropagation();
         e.target.style.backgroundColor = "lightblue";
         e.target.style.color = "yellow";
     })
